@@ -1,0 +1,26 @@
+<!--
+  User: YJ
+  Date: 2023-11-09
+-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>productInfo_상품상세</title>
+</head>
+<body>
+<div>
+<!--    th:object="${product}"-->
+    <p>상품id<input type="text" th:value="${product.productId}" readonly></p>
+    <p>상품명<input type="text" th:value="${product.name}" readonly></p>
+    <p>상품가격<input type="number" th:value="${product.price}" readonly></p>
+    <p>재고수량<input type="number" th:value="${product.quantity}" readonly></p>
+</div>
+<div>
+<!--    # 문자열과 타임리프 변수를 같이 사용하려면  |문자열 '변수' | 사용-->
+    <button th:onclick="|location.href='@{/product/update/{productId}(productId = ${product.productId})}'|">
+        수정하기
+    </button>
+</div>
+</body>
+</html>
