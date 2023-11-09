@@ -39,6 +39,7 @@ public class ProductController {
   }
 
 //  ERROR ) productId -> null
+//  -> HTML 파일에서 th:field로 변경시켜줌
   @PostMapping("/update")
   public String updateProduct(@ModelAttribute ProductUpdateDto productUpdate) {
     productService.updateProduct(productUpdate);
@@ -53,7 +54,7 @@ public class ProductController {
   }
 
 //  ERROR ) delete 수정
-  @PostMapping("/list")
+  @GetMapping("/list")
   public String deleteProduct(@RequestParam long productId) {
     productService.deleteProduct(productId);
     return "redirect:/product/list";

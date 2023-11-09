@@ -11,10 +11,10 @@
 <body>
 <form action="/product/update" method="post" th:object="${product}">
     <!--        model 로 product을 넘겨줘야 th:object과 th:value를 사용할 수 있음 -->
-    <p>상품id<input type="text" th:value="*{productId}" readonly></p>
-    <p>상품명<input type="text" th:value="*{name}"></p>
-    <p>상품가격<input type="text" th:value="*{price}"></p>
-    <p>재고수량<input type="text" th:value="*{quantity}" readonly></p>
+    <p>상품id<input type="text" th:field="*{productId}" readonly></p>
+    <p>상품명<input type="text" th:field="*{name}"></p>
+    <p>상품가격<input type="text" th:field="*{price}"></p>
+    <p>재고수량<input type="text" th:field="*{quantity}" readonly></p>
     <input type="submit" value="수정 완료">
 </form>
 </body>
