@@ -33,6 +33,11 @@
         </td>
         <td th:text="${product.price}">price</td>
         <td th:text="${product.quantity}">quantity</td>
+        <td>
+            <a th:href="@{/product/list(productId=${product.productId})}">
+                삭제
+            </a>
+        </td>
     </tr>
     </tbody>
 </table>
