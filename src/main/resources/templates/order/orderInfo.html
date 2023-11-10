@@ -19,7 +19,7 @@
         <li>재고수량 <input type="number" th:value="${orderProduct.orderQuantity}" readonly></li>
     </ul>
     <div>
-        <button th:onclick="|location.href='@{/order/list/{userId}(userId = ${order.user.userId})}'|">이전으로</button>
+        <button th:onclick="|location.href='@{/order/list}'|">이전으로</button>
     </div>
 </div>
 </body>
